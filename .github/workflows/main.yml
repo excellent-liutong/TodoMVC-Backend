@@ -15,6 +15,7 @@ jobs:
           cd /home/action/Projects/TodoMVC-Backend
           git pull
       - name: install dependency
+        shell: bash
         run: |
           node -v
           npm -v
