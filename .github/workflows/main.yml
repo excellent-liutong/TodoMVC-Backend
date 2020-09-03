@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: update code
+        run: |
+          cd /home/action/Projects/TodoMVC-Backend
+          git pull
+      - name: install dependency
+        run: |
+          yarn install
+          pm2 delete --silent TodoMVC-Server || ':'
+          pm2 start app.js --name TodoMVC-Server
+          pm2 dump
+          pm2 save
