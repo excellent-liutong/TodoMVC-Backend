@@ -1,0 +1,12 @@
+{
+  "name": "TodoMVC-Backend",
+  "version": "1.0.0",
+  "description": "TodoMVC Backend Project",
+  "main": "app.js",
+  "repository": "git@github.com:excellent-liutong/TodoMVC-Backend.git",
+  "author": "light <865460105@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
