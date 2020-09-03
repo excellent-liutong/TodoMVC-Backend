@@ -6,6 +6,9 @@ router
     .get('/', async (req, res) => {
         const userList = await UseController.getAllUser();
         res.send(userList);
+    })
+    .get('/test', async (req, res) => {
+        res.send('test');
     });
 
 
