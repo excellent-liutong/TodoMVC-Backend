@@ -16,8 +16,9 @@ jobs:
           git pull
       - name: install dependency
         run: |
-          pwd
-          cd /home/action/Projects/TodoMVC-Backend
+          yarn -v
+          node -v
+          npm -v
           source /home/action/.bashrc
           yarn install
           pm2 delete --silent TodoMVC-Server || ':'
