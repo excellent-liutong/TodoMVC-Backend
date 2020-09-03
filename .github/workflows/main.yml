@@ -16,11 +16,10 @@ jobs:
           git pull
       - name: install dependency
         run: |
-          yarn -v
           node -v
           npm -v
           source /home/action/.bashrc
-          yarn install
+          npm install
           pm2 delete --silent TodoMVC-Server || ':'
           pm2 start app.js --name TodoMVC-Server
           pm2 dump
