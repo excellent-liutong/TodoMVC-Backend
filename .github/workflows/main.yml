@@ -14,14 +14,3 @@ jobs:
         run: |
           cd /home/action/Projects/TodoMVC-Backend
           git pull
-      - name: install dependency
-        shell: bash
-        run: |
-          node -v
-          npm -v
-          source /home/action/.bashrc
-          npm install
-          pm2 delete --silent TodoMVC-Server || ':'
-          pm2 start app.js --name TodoMVC-Server
-          pm2 dump
-          pm2 save
