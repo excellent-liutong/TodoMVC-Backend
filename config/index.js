@@ -11,13 +11,33 @@ const dbConfig = {
   options: {
     host: '39.97.225.102',
     dialect: 'mysql',
-    schema: 'invoice-prd',
+    // schema: 'todomvc',
     port: 3306, // Default port
     pool: {
       max: 5,
-      min: 1,
+      min: 0,
       idle: 10000
     },
+    retry: {
+        match: [
+            /ETIMEDOUT/,
+            /EHOSTUNREACH/,
+            /ECONNRESET/,
+            /ECONNREFUSED/,
+            /ETIMEDOUT/,
+            /ESOCKETTIMEDOUT/,
+            /EHOSTUNREACH/,
+            /EPIPE/,
+            /EAI_AGAIN/,
+            /SequelizeConnectionError/,
+            /SequelizeConnectionRefusedError/,
+            /SequelizeHostNotFoundError/,
+            /SequelizeHostNotReachableError/,
+            /SequelizeInvalidConnectionError/,
+            /SequelizeConnectionTimedOutError/
+        ],
+        max: 5
+    }
   },
 };
 module.exports = {
