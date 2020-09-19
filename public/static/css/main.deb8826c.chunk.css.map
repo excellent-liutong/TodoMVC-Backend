@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.css"],"names":[],"mappings":"AAAA,MACI,SAAU,CACV,gBAGJ,CAEA,SACI,4BAA4B,CAC5B,UAAY,CACZ,0BACJ","file":"main.deb8826c.chunk.css","sourcesContent":[".todo{\n    opacity: 1;\n    font-size: medium;\n    \n    \n}\n\n.achieve{\n    text-decoration:line-through;\n    opacity: 0.3;\n    transition: all 0.3s ease-in;\n}"]}

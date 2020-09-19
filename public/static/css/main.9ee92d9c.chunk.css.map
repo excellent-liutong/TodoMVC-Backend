@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.css"],"names":[],"mappings":"AAKA,eAHI,UAAa,CACb,0BAMJ,CAJA,SACI,4BAGJ","file":"main.9ee92d9c.chunk.css","sourcesContent":["\n.todo{\n    opacity: 100%;\n    transition: all 0.5s ease-in;\n}\n.achieve{\n    text-decoration:line-through;\n    opacity: 30%;\n    transition: all 0.5s ease-in;\n}"]}
