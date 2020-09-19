@@ -7,15 +7,15 @@ const TodoModel = (sequelize) => {
       unique: true,
       autoIncrement: true,
     },
-    // 主键
-    UserID: {
+    // 主键 事项编号
+    TodoID: {
       type: Sequelize.DataTypes.STRING,
-      unique: true,
       primaryKey: true,
+      unique: true,
       allowNull: false,
     },
-    // 用户名
-    Name: {
+    //用户ID
+    UserID: {
       type: Sequelize.DataTypes.STRING,
       allowNull: false,
     },
@@ -27,7 +27,6 @@ const TodoModel = (sequelize) => {
     Completed: {
       type: Sequelize.DataTypes.BOOLEAN,
     }
-
   }, {
     timestamps: true,
     underscored: false,
