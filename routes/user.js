@@ -9,9 +9,9 @@ router
   // })
 
 
-  // .get('/test', async (req, res) => {
-  //   res.send({ res: 'connect succ' });
-  // })
+  .get('/test', async (req, res) => {
+    res.send({ res: 'connect succ' });
+  })
 
   // 注册
   .post('/register', async (req, res) => {
