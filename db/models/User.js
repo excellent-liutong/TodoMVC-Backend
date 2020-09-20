@@ -25,7 +25,6 @@ const UserModel = (sequelize) => {
       allowNull: false,
     }
   },
-
     {
       timestamps: true,
       underscored: false,

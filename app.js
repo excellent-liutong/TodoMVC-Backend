@@ -71,7 +71,7 @@ app.use(expressJWT({
   secret: secretOrPrivateKey,
   algorithms: ['HS256']
 }).unless({
-  path: ['/token']//除了这个地址，其他的URL都需要验证
+  path: ['/token', '/user/login', '/user/register', '/user/forgetPW', '/todo/createTodo', '/todo/deleteTodo', '/todo/updateTodo', '/todo/getAllTodo']//除了这个地址，其他的URL都需要验证
 }));
 
 //当token失效返回提示信息
@@ -112,6 +112,6 @@ app.use('*', function (req, res, next) {
 const server = http.createServer(app);
 const port = process.env.PORT || '3001';
 server.listen(port, () => {
-  console.log('server on');
+  console.log('server is running on port: ' + port);
 });
 
